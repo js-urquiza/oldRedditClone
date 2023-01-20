@@ -5,32 +5,27 @@
         <h3>Add a link</h3>
         <div class="mb-3">
           <label for="titleInput" class="form-label">Title:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="titleInput"
-            #newTitle
-          />
+          <input type="text" class="form-control" id="titleInput" #newTitle />
         </div>
         <div class="mb-3">
           <label for="linkInput" class="form-label">Link:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="linkInput"
-            #newLink
-          />
+          <input type="text" class="form-control" id="linkInput" #newLink />
         </div>
         <!--A la función addArticle le pasamos como parámetros a:-->
         <!--newTitle y newLink que provienen de las etiquetas input-->
         <!--para convertirlas como variable dentro de esta vista y pasarlas a la fucnión-->
         <!--hay que usar un "resolve", es decir, poner un # con el nombre de la variable-->
-        <button (click)="addArticle(newTitle, newLink)" class="btn btn-primary">Submit</button>
+        <button (click)="addArticle(newTitle, newLink)" class="btn btn-primary">
+          Submit
+        </button>
       </form>
     </div>
   </div>
 </div>
 <div class="container">
-  <hr>
+  <hr />
 </div>
-<app-article *ngFor="let oneArticle of articles" [article]="oneArticle"></app-article>
+<app-article
+  *ngFor="let oneArticle of articles"
+  [article]="oneArticle"
+></app-article>

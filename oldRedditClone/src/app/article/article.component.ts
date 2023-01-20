@@ -11,17 +11,17 @@ export class ArticleComponent {
   article: Article;
 
   constructor() {
-    this.article = new Article('Angular', 'https://angular.io', 10);
+    this.article = new Article('Angular', 'https://angular.io', 10)
   }
 
   voteUp() {
-    this.article.votes = this.article.votes + 1;
+    this.article.voteUp();
     return false;
     //El return false previene que el navegador siga el link vacío y refresque la página.
   }
 
   voteDown() {
-    this.article.votes = this.article.votes - 1;
+    this.article.voteDown();
     return false;
   }
 }

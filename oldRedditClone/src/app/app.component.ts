@@ -11,8 +11,6 @@ export class AppComponent {
   //Añado una nueva propiedad que es un array de artículos
   articles: Article[];
 
-  article1: Article = new Article('Angular', 'http://angular.io', 3);
-
   constructor() {
     this.articles = [
       new Article('Angular', 'http://angular.io', 3),

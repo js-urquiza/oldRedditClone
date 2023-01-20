@@ -33,4 +33,4 @@
 <div class="container">
   <hr>
 </div>
-<app-article [article]="article1"></app-article>
+<app-article *ngFor="let oneArticle of articles" [article]="oneArticle"></app-article>

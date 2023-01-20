@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
@@ -6,24 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./article.component.css'],
 })
 export class ArticleComponent {
-  votes: number;
-  title: string;
-  link: string;
+  
+  article: Article;
 
   constructor() {
-    this.title = 'Angular 2';
-    this.link = 'https://angular.io';
-    this.votes = 10;
+    this.article = new Article('Angular', 'https://angular.io', 10);
   }
 
   voteUp() {
-    this.votes = this.votes + 1;
+    this.article.votes = this.article.votes + 1;
     return false;
     //El return false previene que el navegador siga el link vacío y refresque la página.
   }
 
   voteDown() {
-    this.votes = this.votes - 1;
+    this.article.votes = this.article.votes - 1;
     return false;
   }
 }

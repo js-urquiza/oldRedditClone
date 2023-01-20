@@ -1,18 +1,30 @@
 <div class="container">
-<div class="row">
-  <div class="col">
-    <form>
-      <h3>Add a link</h3>
-      <div class="mb-3">
-        <label for="titleInput" class="form-label">Title:</label>
-        <input type="email" class="form-control" id="titleInput" aria-describedby="emailHelp">
-      </div>
-      <div class="mb-3">
-        <label for="linkInput" class="form-label">Link:</label>
-        <input type="password" class="form-control" id="linkInput">
-      </div>
-      <button (click)="addArticle()" class="btn btn-primary">Submit</button>
-    </form>
+  <div class="row">
+    <div class="col">
+      <form>
+        <h3>Add a link</h3>
+        <div class="mb-3">
+          <label for="titleInput" class="form-label">Title:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="titleInput"
+            aria-describedby="emailHelp"
+            #newTitle
+          />
+        </div>
+        <div class="mb-3">
+          <label for="linkInput" class="form-label">Link:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="linkInput"
+            aria-describedby="emailHelp"
+            #newLink
+          />
+        </div>
+        <button (click)="addArticle(newTitle, newLink)" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
-</div>  
 </div>

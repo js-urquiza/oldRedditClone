@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from './article.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { Article } from './article.model';
 })
 export class ArticleComponent {
   
-  article: Article;
+  @Input() article: Article;
 
   constructor() {
     this.article = new Article('Angular', 'https://angular.io', 10)

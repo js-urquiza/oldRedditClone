@@ -18,9 +18,12 @@ export class ArticleComponent {
 
   voteUp() {
     this.votes = this.votes + 1;
+    return false;
+    //El return false previene que el navegador siga el link vacío y refresque la página.
   }
 
   voteDown() {
     this.votes = this.votes - 1;
+    return false;
   }
 }
